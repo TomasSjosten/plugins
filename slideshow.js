@@ -1,5 +1,3 @@
-
-
 (function($) {
   $.fn.slideShow = function(options) {
     var settings = $.extend({
@@ -7,10 +5,9 @@
     }, options);
 
     var finalTime = settings.time * 2;
-    var selector = this.selector;
+    var selector = this;
     var timer;
     $(selector).css('cursor', 'pointer');
-    console.log('1 ' + settings.time);
     
     var startSlideshow =  setInterval(function() {
       timer = true
