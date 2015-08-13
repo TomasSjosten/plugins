@@ -1,7 +1,7 @@
 #Slideshow plugin made by [Tomas Sjösten](http://tomassjosten.se)
 -----------------------------
 
-To use the plugin, simple include the "main-file", slideshow.php. It'll automaticly find the right folder structure.
+Include the main-file, slideshow.php and call the function "slideShow()" It'll automaticly find the right folder structure.
 ---
 To add own/manipulate images, put them inside the "images" folder.
 
