@@ -1,9 +1,8 @@
-#Plugins made by [Tomas Sjösten](http://tomassjosten.se)
+#Slideshow plugin made by [Tomas Sjösten](http://tomassjosten.se)
 -----------------------------
-If you use the plugin, please make sure to credit the author.
---------
 
 To use the plugin, simple include the "main-file", slideshow.php. It'll automaticly find the right folder structure.
+---
 To add own/manipulate images, put them inside the "images" folder.
 
 
