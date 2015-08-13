@@ -1,5 +1,8 @@
 $(document).ready(function() {
+
+  // add a number to add your own speed to the slideshow
   $('#slideshow').slideShow();
+  
 });
 
 // Can copy this to use somewhere else as its own plugin
