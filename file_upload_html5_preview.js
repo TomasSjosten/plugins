@@ -5,14 +5,12 @@
     }
     var fileCollection = new Array();
     var files = files;
-    console.log(files);
     $.each(files, function(i, file) {
 
       var reader = new FileReader();
       reader.readAsDataURL(file);
 
       reader.onload = function(e) {
-        console.log(e.target.width);
         fileCollection.push(file);
         var template = 
           '<form class="saveit" id="img_upload">' +
