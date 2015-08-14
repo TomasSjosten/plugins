@@ -9,17 +9,17 @@ $(document).ready(function() {
 (function($) {
   $.fn.slideShow = function(options) {
     var settings = $.extend({
-      time: 2000,
+      time: 1500,
     }, options);
 
-    var finalTime = settings.time * 2;
-    var selector = this;
+    var finalTime = settings.time * 2; // Sets how long
+    var selector = this; // Save "this" as variable for multiple use
     var timer;
-    $(selector).css('cursor', 'pointer').children('img:not(:first)').hide();
+    selector.css('cursor', 'pointer').children('img:not(:first)').hide();
     
     var startSlideshow =  setInterval(function() {
       timer = true
-      $(selector).children('img:first')
+      selector.children('img:first')
         .fadeOut(settings.time, function() {
           $(this).next()
           .fadeIn(settings.time)
@@ -29,13 +29,14 @@ $(document).ready(function() {
         });
     }, finalTime);
 
-    $(selector).click(function() {
+    selector.click(function() {
       if (timer) {
+        selector.children('img:first').stop().fadeIn(200);
         clearInterval(startSlideshow);
         timer = false;
       } else {
         console.log('2 ' + settings.time);
-        $(selector).slideShow({time: settings.time});
+        selector.slideShow({time: settings.time});
         timer = true;
       }
     });
