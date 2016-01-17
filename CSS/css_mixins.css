@@ -1,0 +1,65 @@
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  -o-border-radius: $radius;
+  border-radius: $radius;
+}
+
+@mixin text-shadow($horizOffset:0, $vertOffset:0, $blur:0, $color:"0",$horizOffset2:0, $vertOffset2:0, $blur2:0, $color2:white) {
+  -webkit-text-shadow: $horizOffset $vertOffset $blur $color, $horizOffset2 $vertOffset2 $blur2 $color2;
+  -moz-text-shadow: $horizOffset $vertOffset $blur $color, $horizOffset2 $vertOffset2 $blur2 $color2;
+  -ms-text-shadow: $horizOffset $vertOffset $blur $color, $horizOffset2 $vertOffset2 $blur2 $color2;
+  -o-text-shadow: $horizOffset $vertOffset $blur $color, $horizOffset2 $vertOffset2 $blur2 $color2;
+  text-shadow: $horizOffset $vertOffset $blur $color, $horizOffset2 $vertOffset2 $blur2 $color2;
+}
+
+@mixin box-shadow($top, $left, $blur, $shadow, $color, $inset:"") {
+  -webkit-box-shadow: $top $left $blur $shadow $color #{$inset};
+  -moz-box-shadow: $top $left $blur $shadow $color #{$inset};
+  -ms-box-shadow: $top $left $blur $shadow $color #{$inset};
+  -o-box-shadow: $top $left $blur $shadow $color #{$inset};
+  box-shadow: $top $left $blur $shadow $color #{$inset};
+}
+
+
+@mixin box-shadow-multiple($horiz:0, $vert:0, $blur:0, $shadow:0, $color:"0",$horiz2:0, $vert2:0, $blur2:0, $shadow2:0, $color2:white) {
+  -webkit-box-shadow: $horiz $vert $blur $shadow $color, $horiz2 $vert2 $blur2 $shadow2 $color2;
+  -moz-box-shadow: $horiz $vert $blur $shadow $color, $horiz2 $vert2 $blur2 $shadow2 $color2;
+  -ms-box-shadow: $horiz $vert $blur $shadow $color, $horiz2 $vert2 $blur2 $shadow2 $color2;
+  -o-box-shadow: $horiz $vert $blur $shadow $color, $horiz2 $vert2 $blur2 $shadow2 $color2;
+  box-shadow: $horiz $vert $blur $shadow $color, $horiz2 $vert2 $blur2 $shadow2 $color2;
+}
+
+@mixin transition($property, $duration, $delay, $function) {
+  -webkit-transition: $property $duration $delay $function;
+  -moz-transition: $property $duration $delay $function;
+  -ms-transition: $property $duration $delay $function;
+  -o-transition: $property $duration $delay $function;
+  transition: $property $duration $delay $function;
+}
+
+@mixin background-linear($color1, $color2) {
+  -webkit-background: linear-gradient($color1, $color2);
+  -moz-background: linear-gradient($color1, $color2);
+  -ms-background: linear-gradient($color1, $color2);
+  -o-background: linear-gradient($color1, $color2);
+  background: linear-gradient($color1, $color2);
+}
+
+@mixin user-select($value) {
+  -webkit-touch-callout: $value;
+  -webkit-user-select: $value;
+  -khtml-user-select: $value;
+  -moz-user-select: $value;
+  -ms-user-select: $value;
+  user-select: $value;
+}
+
+@mixin background-color($color) {
+  -webkit-background-color: $color;
+  -khtml-background-color: $color;
+  -moz-background-color: $color;
+  -ms-background-color: $color;
+  background-color: $color;
+}
