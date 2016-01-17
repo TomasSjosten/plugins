@@ -1,3 +1,8 @@
+
+/*
+---------------------------------------- Border radius ----------------------------------------
+*/
+
 @mixin border-radius($radius) {
   -webkit-border-radius: $radius;
   -moz-border-radius: $radius;
@@ -6,13 +11,35 @@
   border-radius: $radius;
 }
 
-@mixin text-shadow($horizOffset:0, $vertOffset:0, $blur:0, $color:"0",$horizOffset2:0, $vertOffset2:0, $blur2:0, $color2:white) {
+
+
+
+/*
+ ---------------------------------------- Text shadow  ----------------------------------------
+*/
+@mixin text-shadow($horizOffset:0, $vertOffset:0, $blur:0, $color:"0") {
+  -webkit-text-shadow: $horizOffset $vertOffset $blur $color;
+  -moz-text-shadow: $horizOffset $vertOffset $blur $color;
+  -ms-text-shadow: $horizOffset $vertOffset $blur $color;
+  -o-text-shadow: $horizOffset $vertOffset $blur $color;
+  text-shadow: $horizOffset $vertOffset $blur $color;
+}
+
+@mixin text-shadow-multiple($horizOffset:0, $vertOffset:0, $blur:0, $color:"0",$horizOffset2:0, $vertOffset2:0, $blur2:0, $color2:white) {
   -webkit-text-shadow: $horizOffset $vertOffset $blur $color, $horizOffset2 $vertOffset2 $blur2 $color2;
   -moz-text-shadow: $horizOffset $vertOffset $blur $color, $horizOffset2 $vertOffset2 $blur2 $color2;
   -ms-text-shadow: $horizOffset $vertOffset $blur $color, $horizOffset2 $vertOffset2 $blur2 $color2;
   -o-text-shadow: $horizOffset $vertOffset $blur $color, $horizOffset2 $vertOffset2 $blur2 $color2;
   text-shadow: $horizOffset $vertOffset $blur $color, $horizOffset2 $vertOffset2 $blur2 $color2;
 }
+
+
+
+
+
+/*
+ ---------------------------------------- Box shadow  ----------------------------------------
+*/
 
 @mixin box-shadow($top, $left, $blur, $shadow, $color, $inset:"") {
   -webkit-box-shadow: $top $left $blur $shadow $color #{$inset};
@@ -31,6 +58,12 @@
   box-shadow: $horiz $vert $blur $shadow $color, $horiz2 $vert2 $blur2 $shadow2 $color2;
 }
 
+
+
+
+/*
+ ---------------------------------------- Transition  ----------------------------------------
+*/
 @mixin transition($property, $duration, $delay, $function) {
   -webkit-transition: $property $duration $delay $function;
   -moz-transition: $property $duration $delay $function;
@@ -39,6 +72,12 @@
   transition: $property $duration $delay $function;
 }
 
+
+
+
+/*
+ ---------------------------------------- Background Linear  ----------------------------------------
+*/
 @mixin background-linear($color1, $color2) {
   -webkit-background: linear-gradient($color1, $color2);
   -moz-background: linear-gradient($color1, $color2);
@@ -47,6 +86,11 @@
   background: linear-gradient($color1, $color2);
 }
 
+
+
+/*
+ ---------------------------------------- User select  ----------------------------------------
+*/
 @mixin user-select($value) {
   -webkit-touch-callout: $value;
   -webkit-user-select: $value;
@@ -56,6 +100,11 @@
   user-select: $value;
 }
 
+
+
+/*
+ ---------------------------------------- Background color  ----------------------------------------
+*/
 @mixin background-color($color) {
   -webkit-background-color: $color;
   -khtml-background-color: $color;
