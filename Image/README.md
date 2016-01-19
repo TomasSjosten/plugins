@@ -10,12 +10,12 @@ With the image class can you crop, resize, put on layer effect on images and cac
 
 Followed by the wished result for the cached file
 
-** &crop-to-fit
-** &width=150
-** &height=100
-** &effect=grayscale
-** &quality=60
-** &save-as=jpg
+  * &crop-to-fit
+  * &width=150
+  * &height=100
+  * &effect=grayscale
+  * &quality=60
+  * &save-as=jpg
 
 It's easy to put more effects using PHP GD
 
