@@ -2,7 +2,6 @@
 /*
 ---------------------------------------- Border radius ----------------------------------------
 */
-
 @mixin border-radius($radius) {
   -webkit-border-radius: $radius;
   -moz-border-radius: $radius;
@@ -11,6 +10,15 @@
   border-radius: $radius;
 }
 
+
+@mixin border-radius-specify($top_left:0, $top_right:0, $bottom_right:0, $bottom_left:0)
+{
+    -webkit-border-radius: $top_left $top_right $bottom_right $bottom_left;
+    -khtml-border-radius: $top_left $top_right $bottom_right $bottom_left;
+    -moz-border-radius: $top_left $top_right $bottom_right $bottom_left;
+    -ms-border-radius: $top_left $top_right $bottom_right $bottom_left;
+    border-radius: $top_left $top_right $bottom_right $bottom_left;
+}
 
 
 
@@ -73,6 +81,15 @@
 }
 
 
+@mixin transition-delay($property, $duration, $delay, $function)
+{
+    -webkit-transition: $property $duration $delay $function;
+    -moz-transition: $property $duration $delay $function;
+    -ms-transition: $property $duration $delay $function;
+    -o-transition: $property $duration $delay $function;
+    transition: $property $duration $delay $function;
+}
+
 
 
 /*
@@ -111,4 +128,33 @@
   -moz-background-color: $color;
   -ms-background-color: $color;
   background-color: $color;
+}
+
+
+
+/*
+ ---------------------------------------- Box sizing  ----------------------------------------
+*/
+@mixin box-sizing($thisBox)
+{
+    -webkit-box-sizing: $thisBox;
+    -khtml-box-sizing: $thisBox;
+    -moz-box-sizing: $thisBox;
+    -ms-box-sizing: $thisBox;
+    box-sizing: $thisBox;
+}
+
+
+
+/*
+ ---------------------------------------- Grid column  ----------------------------------------
+*/
+@mixin gridCols($rows: 4, $padding: 0 10px, $margin: 0 0 22px 0, $gutter: 20px) {
+    //width: ($max-width / $columns) * $rows - $gutter;
+    width: (100% / $columns) * $rows;
+    max-width: 100%;
+    float: left;
+    padding: $padding;
+    margin: $margin;
+    @include box-sizing(border-box);
 }

@@ -1,0 +1,91 @@
+/* -------------------------------------------------------------- PARALLAX
+--------------------------------------------------------------------------------------------------- */
+.parallax {
+  perspective: 1px;
+  -webkit-perspective: 1px;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.parallax_layer {
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  position: absolute;
+  padding: 115vh 0;
+}
+
+.parallax_layer--base {
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+  z-index: 2;
+}
+
+.parallax_layer--back {
+  transform: translateZ(-1px) scale(2);
+  -webkit-transform: translateZ(-1px) scale(2);
+  z-index: 0;
+}
+
+.top {
+  top: 35%;
+  z-index: 2;
+}
+
+.content {
+  text-align: justify;
+  position: absolute;
+  background: white;
+  left: 50%;
+  padding: 35px;
+  border-radius: 10px;
+  box-shadow: 4px 4px 10px 3px rgba(0,0,0,0.3);
+  -webkit-box-shadow: 4px 4px 10px 3px rgba(0,0,0,0.3);
+  -moz-box-shadow: 4px 4px 10px 3px rgba(0,0,0,0.3);
+  -ms-box-shadow: 4px 4px 10px 3px rgba(0,0,0,0.3);
+  -o-box-shadow: 4px 4px 10px 3px rgba(0,0,0,0.3);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.section {
+  top: 50%;
+}
+
+.parallax_group {
+  position: relative;
+  height: 500px; /* fallback for older browsers */
+  height: 240vh;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+img {
+  width: 100%;
+}
+
+
+/* -------------------------------------------------------------- MEDIA SCREEN
+--------------------------------------------------------------------------------------------------- */
+@media screen and (max-width: 500px) {
+  .top {
+    top: 8%;
+  }
+
+  .parallax_layer--back {
+    padding: 120vh 0 !important;
+  }
+
+  .parallax_layer {
+    padding: 180vh 0;
+  }
+
+  .content {
+    padding: 10px;
+    left: 0;
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+}
